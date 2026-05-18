@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Taranpreet Singh — Portfolio
 
-## Getting Started
+Personal portfolio built with Next.js, Tailwind CSS, and shadcn/ui.
 
-First, run the development server:
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy (for your X profile link)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Push this repo to GitHub.
+2. Import the project on [Vercel](https://vercel.com).
+3. Add an environment variable:
+   - `NEXT_PUBLIC_URL` = your live URL (e.g. `https://taranships.vercel.app`)
+4. Deploy. Copy your production URL.
 
-## Learn More
+### Add to X
 
-To learn more about Next.js, take a look at the following resources:
+1. Open **X → Profile → Edit profile**.
+2. Set **Website** to your deployed URL.
+3. Optional: pin a post linking to a project (Gloomberg, Compass, etc.).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+When someone opens your link from X, they get a large preview card (title, description, image) from the site metadata.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Customize
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Edit files in `src/config/` — `Hero.tsx`, `About.tsx`, `Projects.tsx`, `Experience.tsx`, etc.
