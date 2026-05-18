@@ -1,3 +1,5 @@
 export const resumeConfig = {
-  url: 'https://drive.google.com/file/d/1ormIiMVpWGAMOZ3FZVj_XrKPkEmPlPQj/preview',
+  /** Served from /public — embedded on /resume */
+  url: '/Taranpreet-Singh-Resume.pdf',
+  filename: 'Taranpreet-Singh-Resume.pdf',
 };

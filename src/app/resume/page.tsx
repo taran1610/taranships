@@ -14,6 +14,15 @@ export default function ResumePage() {
       title="Resume"
       description="AI/ML Engineer — production iOS apps, full-stack AI/fintech platforms, and autonomous trading systems."
     >
+      <p className="text-muted mb-4 text-sm">
+        <a
+          href={resumeConfig.url}
+          download={resumeConfig.filename}
+          className="text-foreground decoration-border hover:text-accent underline underline-offset-4 transition-colors"
+        >
+          Download PDF →
+        </a>
+      </p>
       <iframe
         src={resumeConfig.url}
         title="Resume"
