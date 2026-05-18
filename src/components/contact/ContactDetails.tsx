@@ -21,15 +21,6 @@ export default function ContactDetails() {
           {contactInfo.email}
         </a>
       </p>
-      <p>
-        <span className="text-foreground font-medium">Phone:</span>{' '}
-        <a
-          href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}
-          className="hover:text-foreground underline-offset-4 hover:underline"
-        >
-          {contactInfo.phone}
-        </a>
-      </p>
       <div className="flex flex-wrap items-center gap-4 pt-2">
         <a
           href={contactInfo.x.href}

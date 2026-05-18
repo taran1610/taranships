@@ -60,17 +60,6 @@ export function Header() {
             </a>
           </>
         ) : null}
-        {site.phone ? (
-          <>
-            <span className="text-faint">·</span>
-            <a
-              href={`tel:${site.phone.replace(/\s/g, '')}`}
-              className="text-muted decoration-border hover:text-foreground underline underline-offset-4 transition-colors"
-            >
-              {site.phone}
-            </a>
-          </>
-        ) : null}
       </div>
 
       <hr className="border-border mt-14" />

@@ -5,7 +5,6 @@ export const site = {
   tagline: 'AI/ML Engineer · FinTech · iOS',
   bio: 'AI/ML Engineer with experience building and shipping production iOS apps and full-stack AI/fintech platforms. Strong in Python, LLM systems, and real-time data applications. Built and launched 2 App Store apps and multiple AI-driven products.',
   email: 'taranpreets2004@gmail.com',
-  phone: '+1 (437) 231-5110',
   links: {
     github: 'https://github.com/taran1610',
     x: 'https://x.com/taranx0911',

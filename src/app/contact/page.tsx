@@ -28,15 +28,6 @@ export default function ContactPage() {
           </a>
         </li>
         <li>
-          <span className="text-foreground font-medium">Phone:</span>{' '}
-          <a
-            href={`tel:${site.phone.replace(/\s/g, '')}`}
-            className="text-foreground decoration-border hover:text-accent underline underline-offset-4"
-          >
-            {site.phone}
-          </a>
-        </li>
-        <li>
           <a
             href={site.links.x}
             target="_blank"
