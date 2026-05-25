@@ -1,50 +1,69 @@
-import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
-import { Instrument_Serif } from 'next/font/google';
-import './globals.css';
-import { site } from '@/lib/site';
+import type { Metadata } from "next";
+import { Geist, Geist_Mono, Bricolage_Grotesque } from "next/font/google";
+import "./globals.css";
+import { site } from "@/lib/site";
 
 const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
 });
 
-const instrumentSerif = Instrument_Serif({
-  variable: '--font-instrument-serif',
-  weight: '400',
-  subsets: ['latin'],
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: `${site.name} — Portfolio`,
-  description: site.bio,
-  openGraph: {
-    title: site.name,
-    description: site.bio,
-    type: 'website',
+  metadataBase: new URL("https://taranships.vercel.app"),
+  title: {
+    default: `${site.name} — ${site.role}`,
+    template: `%s — ${site.name}`,
   },
+  description: site.bio,
+  keywords: [
+    "Taranpreet Singh",
+    "AI Engineer",
+    "FinTech",
+    "iOS Developer",
+    "Toronto",
+    "Founding Engineer",
+    "LLM",
+    "Multi-agent systems",
+  ],
+  authors: [{ name: site.name, url: site.links.github }],
+  creator: site.name,
+  openGraph: {
+    type: "website",
+    title: `${site.name} — ${site.role}`,
+    description: site.tagline,
+    url: "https://taranships.vercel.app",
+    siteName: site.name,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} — ${site.role}`,
+    description: site.tagline,
+    creator: `@${site.xHandle}`,
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${bricolage.variable} h-full antialiased`}
     >
-      <body className="min-h-full">
-        <div className="mx-auto min-h-full w-full max-w-2xl px-6 py-16 sm:px-8 sm:py-24">
-          {children}
-        </div>
-      </body>
+      <body className="relative min-h-full">{children}</body>
     </html>
   );
 }

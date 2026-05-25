@@ -11,13 +11,43 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## Deploy (for your X profile link)
+## Deploy on Vercel
 
-1. Push this repo to GitHub.
-2. Import the project on [Vercel](https://vercel.com).
-3. Add an environment variable:
-   - `NEXT_PUBLIC_URL` = your live URL (e.g. `https://taranships.vercel.app`)
-4. Deploy. Copy your production URL.
+Repo: [github.com/taran1610/taranships](https://github.com/taran1610/taranships)
+
+### Easiest: connect GitHub (recommended)
+
+1. Go to [vercel.com/new](https://vercel.com/new).
+2. Import **taran1610/taranships**.
+3. Click **Deploy** (defaults are fine).
+4. Every push to `main` redeploys automatically.
+
+### CLI (run one command at a time)
+
+Do **not** paste multiple lines with `# comments` — zsh can throw `missing end of string` or `Can't deploy more than one path`.
+
+```bash
+cd /Users/sonal/taranships
+npx vercel login
+```
+
+Preview deploy:
+
+```bash
+npm run deploy
+```
+
+Production deploy:
+
+```bash
+npm run deploy:prod
+```
+
+First time, the CLI will ask to link/create a project — choose your account and confirm.
+
+Optional env var in Vercel → Settings → Environment Variables:
+
+- `NEXT_PUBLIC_URL` = `https://your-project.vercel.app` (for social link previews)
 
 ### Add to X
 
